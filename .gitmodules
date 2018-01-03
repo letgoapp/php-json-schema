@@ -1,6 +1,0 @@
-[submodule "rapidjson"]
-	path = rapidjson
-	url = https://github.com/Tencent/rapidjson.git
-[submodule "valijson"]
-	path = valijson
-	url = https://github.com/tristanpenman/valijson.git
