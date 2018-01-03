@@ -84,7 +84,7 @@ LINKER              =   g++
 #   with a list of all flags that should be passed to the linker.
 #
 
-COMPILER_FLAGS      =   -Wall -I valijson/include -I valijson/thirdparty/rapidjson-1.0.2 -c -O2 -std=c++11 -fpic -o
+COMPILER_FLAGS      =   -Wall -I valijson/include -I valijson/thirdparty/rapidjson-1.0.2/include -c -O2 -std=c++11 -fpic -o
 LINKER_FLAGS        =   -shared  -I rapidjson
 LINKER_DEPENDENCIES =   -lphpcpp
 
