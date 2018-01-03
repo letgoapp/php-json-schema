@@ -5,11 +5,27 @@ This PHP extension is intended to validate [JSON documents](https://www.json.org
 ## Requirements
 
 - GCC compiler
-- [PHPCPP](http://www.php-cpp.com/documentation/install)
+- C++ library for developing PHP extensions, [PHPCPP](http://www.php-cpp.com/documentation/install)
+- Header-only C++ library, [valijson](https://github.com/tristanpenman/valijson)
 
-## How to build
+## How to install
 
-Just run `make` that will create a json-schema.so which should be copied to the PHP extension directory and loaded in the PHP INI.
+Run the following commands:
+
+```
+~# git clone https://github.com/CopernicaMarketingSoftware/PHP-CPP.git
+~# cd PHP-CPP
+~# make
+~# make install
+~# cd ..
+~# git clone https://github.com/softrog/php-json-schema.git
+~# cd php-json-schema
+~# git clone https://github.com/tristanpenman/valijson.git
+~# make
+~# make install
+```
+
+The extension should be copied into the PHP EXTENSION_DIR and ready to be loaded.
 
 ## API
 
