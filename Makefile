@@ -21,20 +21,6 @@
 NAME                =   json-schema
 
 #
-#   Php.ini directories
-#
-#   In the past, PHP used a single php.ini configuration file. Today, most
-#   PHP installations use a conf.d directory that holds a set of config files,
-#   one for each extension. Use this variable to specify this directory.
-#
-#   In Ubuntu 14.04 Apache 2.4 is used, which uses the mods-available directory
-#   instead of a conf.d directory. In 16.04 the directory changed yet again.
-#   This has to be checked.
-#
-
-INI_DIR     =   /etc/php/7.1/mods-available
-
-#
 #   The extension dirs
 #
 #   This is normally a directory like /usr/lib/php5/20121221 (based on the 
@@ -53,7 +39,6 @@ EXTENSION_DIR       =   $(shell php-config --extension-dir)
 #
 
 EXTENSION           =   ${NAME}.so
-INI                 =   ${NAME}.ini
 
 #
 #   Compiler
@@ -124,7 +109,6 @@ ${OBJECTS}:
 
 install:        
 			${CP} ${EXTENSION} ${EXTENSION_DIR}
-			${CP} ${INI} ${INI_DIR}
 
 clean:
 			${RM} ${EXTENSION} ${OBJECTS}
